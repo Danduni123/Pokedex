@@ -21,6 +21,9 @@ pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
 
 
-for index, item in enumerate(data):
-    print(index, ':', item['name'])
-    if "c" in data:
+""" for index, item in enumerate(data):
+    print(':', item['name']) """
+
+for item in (data):
+    if input(" ") == [0]:
+        print(data)
