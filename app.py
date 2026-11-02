@@ -25,5 +25,7 @@ data = json.load(pokedex)
     print(':', item['name']) """
 
 for item in (data):
-    if input(" ") == [0]:
-        print(data)
+    print(input("Which pokemon would you like to search?"))
+    a = input
+    if a [0]:
+        print(a) 
