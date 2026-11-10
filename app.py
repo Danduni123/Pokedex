@@ -20,11 +20,9 @@ import json
 pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
 
-
-""" for index, item in enumerate(data):
-    print(':', item['name']) """
-
-for item in (data):
-    a = input
-    print(input("Which pokemon would you like to search?"))
-    print(a[0])
+def lang():
+    language = input("What language do you want the pokemon to be in?")
+    for item in (data):
+        print(item["name"][language])
+        for item in (data):
+            print(item)["name"[type]]
