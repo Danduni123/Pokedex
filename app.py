@@ -23,6 +23,13 @@ data = json.load(pokedex)
 def lang():
     language = input("What language do you want the pokemon to be in?")
     for item in (data):
-        print(item["name"][language])
-        for item in (data):
-            print(item)["name"[type]]
+        print(item["name"][language])      
+    pokemon_type = input("Which pokemon type are you looking for?")
+    for item in (data):
+        if pokemon_type.title() in item["type"]:
+            print(item['name'][language])
+    pokemon_name = input("Which pokemon would you like to find?")
+    for item in (data):
+        if pokemon_name.lower() in item["name"].lower():
+            print(item['name'][pokemon_type])
+lang()
