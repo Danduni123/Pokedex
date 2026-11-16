@@ -29,7 +29,8 @@ def lang():
         if pokemon_type.title() in item["type"]:
             print(item['name'][language])
     pokemon_name = input("Which pokemon would you like to find?")
+    pokemon_name = pokemon_name.lower()
     for item in (data):
-        if pokemon_name.lower() in item["name"].lower():
-            print(item['name'][pokemon_type])
+        if pokemon_name in item['name']['english'].lower():
+            print(item["name"]['english'])
 lang()
