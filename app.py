@@ -24,27 +24,25 @@ print(data[0]) """
 import json
 pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
-
-def lang():
-    language = input("What language do you want the pokemon to be in?")
+language = input("What language do you want the pokemon to be in?")
+def lang(x):
     for item in (data):
-        print(item["name"][language])
-lang()
-def tape():
+        print(item["name"][x])
+lang(language)
+def tape(y):
     pokemon = 0
     pokemon_type = input("Which pokemon type are you looking for?")
-    language = input("What language do you want the pokemon to be in?")
     for item in data:
         if pokemon_type.title() in item["type"]:
-            print(item['name'][language])
+            print(item['name'][y])
             pokemon +=1
     else:
         pokemon == 0 and print("No pokemon of that type were found")
-tape()
-def find():
-    pokemon_name = input("Which pokemon would you like to find?")
-    pokemon_name = pokemon_name.lower()
-    for item in (data):
-        if pokemon_name in item['type']['english']:
-            print(item['name']['english'])
-find()
+tape(language)
+pokemon_name = input("Which pokemon would you like to find?")
+pokemon_name = pokemon_name.lower()
+def find(z):
+    for i in range(len(data)):
+        if pokemon_name in data[i]['name']['english'].lower():
+            print(data[i]['name']['english'])
+find(pokemon_name)
