@@ -20,8 +20,9 @@ print(data[0]) """
 #loop through all moves and if type matches append the name of move to list
 
 
-
 import json
+moves = open("./moves.json", encoding="utf8")
+data = json.load(moves)
 pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
 language = input("What language do you want the pokemon to be in?")
@@ -46,3 +47,11 @@ def find(z):
         if pokemon_name in data[i]['name']['english'].lower():
             print(data[i]['name']['english'])
 find(pokemon_name)
+
+def moves():
+    pokemon_moves = print("Here are the moves that the pokemo can learn")
+    pokemon_moves = pokemon_moves.lower
+    for i in range(len(data)):
+        if pokemon_moves in data[i]['type']['english']['ename'].lower():
+            print(data[i]['type']['english']['ename'])
+moves()
